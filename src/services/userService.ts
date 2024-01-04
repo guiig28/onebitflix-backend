@@ -63,12 +63,37 @@ export const userService = {
       email: string;
     }
   ) => {
-    const [affectedRows, updatedUsers] = await User.update(attributes, {
+    await User.update(attributes, {
       where: { id },
-      returning: true,
     });
 
-    return updatedUsers[0];
+    const updatedUser = User.findByPk(id, {
+      attributes: [
+        "id",
+        ["first_name", "firstName"],
+        ["last_name", "lastName"],
+        "phone",
+        "birth",
+        "email",
+        "password",
+      ],
+    });
+
+    return updatedUser;
+  },
+
+  updatePassword: async (id: string | number, password: string) => {
+    const response = await User.update(
+      {
+        password,
+      },
+      {
+        where: { id },
+        individualHooks: true,
+      }
+    );
+
+    return response;
   },
 
   getKeepWatchingList: async (id: number) => {
