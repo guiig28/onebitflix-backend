@@ -41,6 +41,7 @@ export const userService = {
         "birth",
         "email",
         "password",
+        ["created_at", "createdAt"],
       ],
       where: { email },
     });
