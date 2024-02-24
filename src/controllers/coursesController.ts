@@ -3,6 +3,7 @@ import { courseService } from "../services/courseService";
 import { getPaginationParams } from "../helpers/getPaginationParams";
 import { AuthenticatedRequest } from "../middlewares/auth";
 import { likeService } from "../services/likeService";
+import { favoriteService } from "../services/favoriteService";
 
 export const coursesController = {
   // GET /courses/:id
@@ -19,7 +20,12 @@ export const coursesController = {
 
       const liked = await likeService.isLiked(userId, Number(courseId));
 
-      return res.json({ ...course.get(), liked });
+      const favorited = await favoriteService.isFavorited(
+        userId,
+        Number(courseId)
+      );
+
+      return res.json({ ...course.get(), liked, favorited });
     } catch (err) {
       if (err instanceof Error) {
         return res.status(400).json({ message: err.message });
