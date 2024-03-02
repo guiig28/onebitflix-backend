@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import cors from "cors";
 import { database } from "./database";
@@ -20,7 +23,7 @@ const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   database.authenticate().then(() => {
-    console.log("DB conection successfull");
+    console.log("DB connection successful");
   });
-  console.log(`Server started successfuly at port ${PORT}`);
+  console.log(`Server started successfully at port ${PORT}`);
 });

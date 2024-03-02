@@ -1,8 +1,9 @@
 import { AuthenticationOptions } from "@adminjs/express";
 import { User } from "../models";
 import bcrypt from "bcrypt";
+import { ADMINJS_COOKIE_PASSWORD } from "../config/environment";
 
-export const authtenticationOptions: AuthenticationOptions = {
+export const authenticationOptions: AuthenticationOptions = {
   authenticate: async (email, password) => {
     const user = await User.findOne({ where: { email } });
 
@@ -16,5 +17,5 @@ export const authtenticationOptions: AuthenticationOptions = {
 
     return false;
   },
-  cookiePassword: "senha-temporaria",
+  cookiePassword: ADMINJS_COOKIE_PASSWORD,
 };
