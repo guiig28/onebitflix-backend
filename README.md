@@ -78,3 +78,48 @@ npm run build
 ```bash
 npm run start
 ```
+
+<h2 id="routes">API Endpoints</h2>
+
+Descrição de todos os endpoints da api:
+​
+| route               | description                                          
+|----------------------|-----------------------------------------------------
+| [<kbd>POST /auth/register</kbd>](#post-auth-register)     | cria um registro para o usuário
+| [<kbd>POST /auth/login</kbd>](#post-auth-login)     | gera ao usuário um codigo de acesso que o permite a acessar a o conteudo da aplicação
+
+<h3 id="post-auth-register">POST /auth/register</h3>
+
+**REQUEST**
+```json
+{
+  "username": "fernandakipper",
+  "password": "4444444"
+}
+```
+
+**RESPONSE**
+```json
+{
+  "name": "Fernanda Kipper",
+  "age": 20,
+  "email": "her-email@gmail.com"
+}
+```
+
+<h3 id="post-auth-login">POST /auth/login</h3>
+
+**REQUEST**
+```json
+{
+  "username": "fernandakipper",
+  "password": "4444444"
+}
+```
+
+**RESPONSE**
+```json
+{
+  "token": "OwoMRHsaQwyAgVoc3OXmL1JhMVUYXGGBbCTK0GBgiYitwQwjf0gVoBmkbuyy0pSi"
+}
+```
