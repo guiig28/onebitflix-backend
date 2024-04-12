@@ -398,9 +398,57 @@ Descrição de todos os endpoints da api:
 **RESPONSE**
 ```json
 {
-  "courseId": 11
+  "courseId": 11,
   "userId": 31,
   "updatedAt": "2024-04-11T18:39:07.476Z",
+  "createdAt": "2024-04-11T18:39:07.476Z"
+}
+```
+
+<h3 id="delete-favorites-id">DELETE /favorites/:id</h3>
+
+**REQUEST**
+
+`/favorites/19`
+
+<h3 id="post-likes">POST /likes</h3>
+
+**REQUEST**
+```json
+{
+  "courseId": 6
+}
+```
+
+**RESPONSE**
+```json
+{
+  "courseId": 6,
+  "userId": 28,
+  "updatedAt": "2024-04-11T18:39:07.476Z",
+  "createdAt": "2024-04-11T18:39:07.476Z"
+}
+```
+
+<h3 id="delete-likes-id">DELETE /likes/:id</h3>
+
+**REQUEST**
+
+`/likes/12`
+
+<h3 id="get-user-current">GET /user/current</h3>
+
+**RESPONSE**
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "phone": "999999999",
+  "birth": "1995-09-02",
+  "email": "john2@email.com",
+  "password": "F41A65F416A41FDSAW6541FA8F41W41Q891WQ981QF91WQ8F5E91WQ",
+  "role": "user"
+  "updatedAt": "2024-04-11T18:39:07.476Z"
   "createdAt": "2024-04-11T18:39:07.476Z"
 }
 ```
