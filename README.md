@@ -452,7 +452,7 @@ Descrição de todos os endpoints da api:
   "createdAt": "2024-04-11T18:39:07.476Z"
 }
 ```
-<h3 id="put-user-current">PUT /user/current</h3>
+<h3 id="put-users-current">PUT /user/current</h3>
 
 **REQUEST**
 ```json
@@ -477,7 +477,7 @@ Descrição de todos os endpoints da api:
 }
 ```
 
-<h3 id="put-user-current-password">PUT /user/current/password</h3>
+<h3 id="put-users-current-password">PUT /user/current/password</h3>
 
 **REQUEST**
 ```json
