@@ -452,3 +452,37 @@ Descrição de todos os endpoints da api:
   "createdAt": "2024-04-11T18:39:07.476Z"
 }
 ```
+<h3 id="put-user-current">PUT /user/current</h3>
+
+**REQUEST**
+```json
+{
+    "phone": "911111111",
+    "email": "john3@email.com"
+}
+```
+
+**RESPONSE**
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "phone": "911111111",
+  "birth": "1995-09-02",
+  "email": "john3@email.com",
+  "password": "F41A65F416A41FDSAW6541FA8F41W41Q891WQ981QF91WQ8F5E91WQ",
+  "role": "user"
+  "updatedAt": "2024-04-11T18:39:07.476Z"
+  "createdAt": "2024-04-11T18:39:07.476Z"
+}
+```
+
+<h3 id="put-user-current-password">PUT /user/current/password</h3>
+
+**REQUEST**
+```json
+{
+    "currentPassword": "444444",
+    "newPassword": "654321"
+}
+```
