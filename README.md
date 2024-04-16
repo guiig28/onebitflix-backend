@@ -1,7 +1,7 @@
 
 # OneBitFlix - Back-End
 
-OneBitFlix é um projeto fullstack feito para o trabalho de conclusão do curso Deselvolvedor Fullstack da OneBitCode, onde simulamos uma plataforma de cursos onlines inspirado no Netflix. Essa parte do projeto consiste no back-end da plataforma, criado em Node.js, Sequelize e utilizando o MySQL como banco de dados.
+OneBitFlix é uma aplicação web fullstack feito para o trabalho de conclusão do curso Deselvolvedor Fullstack da OneBitCode, onde simulamos uma plataforma de cursos onlines inspirado no Netflix. Essa parte do projeto consiste no back-end da plataforma, criado em Node.js, Sequelize e utilizando o MySQL como banco de dados.
 
 
 ## Principais Funcionalidades
